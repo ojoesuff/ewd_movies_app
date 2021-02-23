@@ -1,0 +1,37 @@
+{
+  "name": "moviesApp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@material-ui/icons": "^4.11.2",
+    "dotenv": "^8.2.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-hook-form": "^3.29.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -c ./.storybook",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@bahmutov/print-env": "1.2.0",
+    "@storybook/addon-actions": "^6.1.19",
+    "@storybook/react": "^6.1.19"
+  }
+}
