@@ -8,6 +8,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
 import IconButton from "@material-ui/core/IconButton";
@@ -15,6 +16,7 @@ import Grid from "@material-ui/core/Grid";
 import img from '../../images/film-poster-placeholder.png'
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
+import { AvatarGroup } from "@material-ui/lab";
 
 const useStyles = makeStyles({
   card: { maxWidth: 345 },
@@ -24,18 +26,28 @@ const useStyles = makeStyles({
   },
 });
 
+const avatarGroup = (favorite, watchlist) => {
+  <AvatarGroup>
+    if(favorite) {
+      <Avatar>
+      <FavoriteIcon />
+    </Avatar>
+    }
+    if(favorite) {
+      <Avatar>
+      <FavoriteIcon />
+    </Avatar>
+    }
+  </AvatarGroup>
+}
+
 export default function MovieCard({ movie, action }) {
   const classes = useStyles();
   return (
     <Card className={classes.card}>
       <CardHeader
       className={classes.header}
-      avatar={
-        movie.favorite ? (
-          <Avatar className={classes.avatar}>
-            <FavoriteIcon />
-          </Avatar>
-        ) : null
+      avatar={avatarGroup(movie.favorite, movie.watchlist)
       }
       title={
         <Typography variant="h5" component="p">
